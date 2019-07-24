@@ -11,24 +11,40 @@ public class TestChangePassword {
 	
 	private ChangePassword changePassword;
 	private Map<String,String> testData;
+	private boolean actualOutput;
 	@BeforeMethod(alwaysRun = true)
 	public void beforeMethod() throws Exception {
 		changePassword = new ChangePassword();
 		testData = new HashMap<String, String>();
 	}
 
-	@Test(description = "verify password is correct", groups = {"Negative" })
+	@Test(description = "verify password is correct", groups = {"Positive" })
 	public void testCorrectPassword() throws Exception {
-		testData = DataReader.readData("data.json", "NegativeTest1");
-		boolean actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
-		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+		testData = DataReader.readData("data.json", "Test1");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, true, "Verify password, New Password entered " + testData.get("NewPassword"));
 	}
 	
-	@Test(description = "verify password is correct 2", groups = {"Negative" })
+	@Test(description = "verify password is correct when it has exact 18 chars", groups = {"Positive" })
 	public void testCorrectPassword2() throws Exception {
-		testData = DataReader.readData("data.json", "NegativeTest2");
-		boolean actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
-		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+		testData = DataReader.readData("data.json", "Test2");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, true, "Verify password, New Password entered " + testData.get("NewPassword"));
 	}
+	
+	@Test(description = "Verify password when it has duplicate charactes max by 4", groups = {"Positive" })
+	public void testCorrectPassword3() throws Exception {
+		testData = DataReader.readData("data.json", "Test3");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, true, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+	
+	@Test(description = "Verify password when it has exact 4 special charcaters", groups = {"Positive" })
+	public void testCorrectPassword4() throws Exception {
+		testData = DataReader.readData("data.json", "Test4");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, true, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+
 
 }

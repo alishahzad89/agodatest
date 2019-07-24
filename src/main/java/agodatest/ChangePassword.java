@@ -14,12 +14,6 @@ public class ChangePassword {
 	private float oldPercentage = 80.0f;
 
 	public boolean changePassword(String oldPassword, String newPassword) {
-		// System.out.println(checkAlphnumericWithCount(newPassword));
-		// System.out.println(checkAtleastOneChar(newPassword));
-		// System.out.println(checkDuplicateCharsCount(newPassword));
-		// System.out.println(checkSpecialCharCount());
-		// System.out.println(checkNumberPercenatge(newPassword));
-		// System.out.println(checkSimilaritiesPercentage(oldPassword, newPassword));
 		return (checkAlphnumericWithCount(newPassword) && checkAtleastOneChar(newPassword)
 				&& checkDuplicateCharsCount(newPassword) && checkSpecialCharCount()
 				&& checkNumberPercenatge(newPassword) && checkSimilaritiesPercentage(oldPassword, newPassword));

@@ -5,18 +5,50 @@
 	},
 	"Test2": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
-		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+		"NewPassword": "!Aa1zxcvbnmasdfghj"
 	},
 	"Test3": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
-		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+		"NewPassword": "!!AAAA1111zxcvbnmasdfghj"
+	},
+	"Test4": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!!@@A1231zxcvbnmasdfghj"
 	},
 	"NegativeTest1": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
-		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+		"NewPassword": "Aa1zxcvbnmasdf12"
 	},
 	"NegativeTest2": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
-		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+		"NewPassword": "Aa1zxcvbnmasdfghjklqwer~"
+	},
+	"NegativeTest3": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "!aa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest4": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "!A123ZXCVBNMASDFG"
+	},
+	"NegativeTest5": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "!Aazxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest6": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "Aa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest7": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "!AAAAAa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest8": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "@!!@$AAAa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest9": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbnma123456789"
 	}
 }
