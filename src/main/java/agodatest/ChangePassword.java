@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class ChangePassword {
 
+	private final String existingSystemPassword = "ABCDEFghijklmnopqrstuvwxyz1";
+
 	private int numberCount = 0;
 	private int specialCharCount = 0;
 	private Map<Character, Integer> charMap = new HashMap<Character, Integer>();
@@ -14,9 +16,20 @@ public class ChangePassword {
 	private float oldPercentage = 80.0f;
 
 	public boolean changePassword(String oldPassword, String newPassword) {
+		if (!existingSystemPassword.equals(oldPassword)) {
+			return false;
+		}
+		if (!checkIsPasswordValid(newPassword)) {
+			return false;
+		}
+
+		return (checkSimilaritiesPercentage(oldPassword, newPassword));
+	}
+
+	private boolean checkIsPasswordValid(String newPassword) {
 		return (checkAlphnumericWithCount(newPassword) && checkAtleastOneChar(newPassword)
 				&& checkDuplicateCharsCount(newPassword) && checkSpecialCharCount()
-				&& checkNumberPercenatge(newPassword) && checkSimilaritiesPercentage(oldPassword, newPassword));
+				&& checkNumberPercenatge(newPassword));
 	}
 
 	private boolean checkAlphnumericWithCount(String newPassword) {

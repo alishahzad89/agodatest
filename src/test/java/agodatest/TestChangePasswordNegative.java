@@ -77,6 +77,20 @@ public class TestChangePasswordNegative {
 		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
 		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
 	}
+	
+	@Test(description = "verify password when it does not match with old password", groups = {"Negative" })
+	public void testPasswordMismatch() throws Exception {
+		testData = DataReader.readData("data.json", "NegativeTest10");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+	@Test(description = "verify password when it is matching more than 80 percent with old password", groups = {"Negative" })
+	public void testPasswordSimilarToOldPassword() throws Exception {
+		testData = DataReader.readData("data.json", "NegativeTest11");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+
 
 
 }

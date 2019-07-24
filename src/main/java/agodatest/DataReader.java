@@ -9,6 +9,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 public class DataReader {
+	
 	public static String getResourceFolderPath() {
 		return System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
 				+ "resources" + File.separator + "agoda" + File.separator;

@@ -49,6 +49,14 @@
 	},
 	"NegativeTest9": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbn123456789123"
+	},
+	"NegativeTest10": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz2",
 		"NewPassword": "!Aa1zxcvbnma123456789"
+	},
+	"NegativeTest11": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "ABCDEFghijklmnopqrstuvwx"
 	}
 }
