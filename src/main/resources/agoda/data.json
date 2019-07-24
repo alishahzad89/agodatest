@@ -58,5 +58,21 @@
 	"NegativeTest11": {
 		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
 		"NewPassword": "ABCDEFghijklmnopqrstuvwx"
+	},
+	"NegativeTest12": {
+		"OldPassword": "ABCDEFGHIJKLMNOPQRSTUVWXYZ1",
+		"NewPassword": "ABCDEFghijklmnopqrstuvwx"
+	},
+	"NegativeTest13": {
+		"OldPassword": "abcdefghijklmnopqrstuvwxyz1",
+		"NewPassword": "ABCDEFghijklmnopqrstuvwx"
+	},
+	"NegativeTest14": {
+		"OldPassword": "",
+		"NewPassword": "ABCDEFghijklmnopqrstuvwx"
+	},
+	"NegativeTest15": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": ""
 	}
 }

@@ -12,7 +12,7 @@ public class ChangePassword {
 	private Map<Character, Integer> charMap = new HashMap<Character, Integer>();
 	private String specialCharAllowed = "!@#$&*";
 	private String numberString = "0123456789";
-	private float numbrePercentage = 50.0f;
+	private float numberPercentage = 50.0f;
 	private float oldPercentage = 80.0f;
 
 	public boolean changePassword(String oldPassword, String newPassword) {
@@ -75,7 +75,7 @@ public class ChangePassword {
 		}
 
 		float perValue = (float) ((float) numberCount / (float) newPassword.length()) * 100;
-		if (perValue < numbrePercentage) {
+		if (perValue < numberPercentage) {
 			return true;
 		}
 		return false;

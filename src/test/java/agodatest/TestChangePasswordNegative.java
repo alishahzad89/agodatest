@@ -90,6 +90,28 @@ public class TestChangePasswordNegative {
 		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
 		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
 	}
+	
+	@Test(description = "verify old password when it is entered in all capital letters", groups = {"Negative" })
+	public void testPasswordWithAllCaps() throws Exception {
+		testData = DataReader.readData("data.json", "NegativeTest12");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+	
+	@Test(description = "verify old password when it is entered as blank", groups = {"Negative" })
+	public void testOldPasswordWithEmpty() throws Exception {
+		testData = DataReader.readData("data.json", "NegativeTest14");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+	
+	@Test(description = "verify password when it is entered as blank", groups = {"Negative" })
+	public void testPasswordWithEmpty() throws Exception {
+		testData = DataReader.readData("data.json", "NegativeTest15");
+		actualOutput = changePassword.changePassword(testData.get("OldPassword"), testData.get("NewPassword"));
+		Assert.assertEquals(actualOutput, false, "Verify password, New Password entered " + testData.get("NewPassword"));
+	}
+
 
 
 
