@@ -1,0 +1,22 @@
+{
+	"Test1": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+	},
+	"Test2": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+	},
+	"Test3": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest1": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1",
+		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+	},
+	"NegativeTest2": {
+		"OldPassword": "ABCDEFghijklmnopqrstuvwxyz1!",
+		"NewPassword": "!Aa1zxcvbnmasdfghjklqwer"
+	}
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="Change Password Test Suite" verbose="2"
+	parallel="classes" thread-count="2">
+	<test name="Change Password Tests	" group-by-instances="false"
+		preserve-order="true">
+		<groups>
+			<run>
+				<include name="Positive" />
+				<include name="Negative" />
+			</run>
+		</groups>
+		<classes>
+			<class name="agodatest.TestChangePassword" />
+			<class name="agodatest.TestChangePasswordNegative" />
+		</classes>
+	</test>
+
+</suite>
